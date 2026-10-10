@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #fbfbfe; --surface: #ffffff; --muted: #eff0f4; --line: #e3e5ea;
+  --ink: #14161a; --sub: #6a7280; --brand: #2563eb; --band: #181b20;
+}
+.dark {
+  --bg: #0d0f12; --surface: #15181d; --muted: #1c2026; --line: #272c34;
+  --ink: #f2f3f5; --sub: #9aa1ac; --brand: #4f8bf7; --band: #07080a;
+}
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body), system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+.field { width: 100%; border-radius: 0.5rem; border: 1px solid var(--line); background: var(--surface); padding: 0.7rem 0.9rem; font-size: 0.9rem; }
+.field:focus { outline: 2px solid var(--brand); outline-offset: -1px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border-radius: .5rem; background: var(--brand); color: #fff; padding: .8rem 1.4rem; font-weight: 600; font-size: .9rem; transition: filter .15s; }
+.btn:hover { filter: brightness(1.1); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn-ghost:hover { background: var(--muted); filter: none; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
