@@ -63,3 +63,14 @@ for i, (cat, brand, name, tag, price, blurb) in enumerate(C):
     })
 json.dump(out, open("src/data/products.json", "w"), indent=1)
 print(len(out), "products written")
+
+# ---- dataset-wide insights for the /insights dashboard (all rows of the CSV, not just the 32 catalog items)
+tot = sales["total"].sort_values(ascending=False)
+k = max(1, int(len(tot) * 0.1))
+insights = {
+    "products": int(len(df)),
+    "monthly": [int(round(sales[c].sum() / 100)) for c in cols],
+    "top10Share": round(float(tot.head(k).sum() / tot.sum() * 100), 1),
+}
+json.dump(insights, open("src/data/insights.json", "w"), indent=1)
+print("insights:", insights)

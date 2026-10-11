@@ -23,7 +23,7 @@ export default function Header() {
     try { localStorage.setItem("rushh:theme", next ? "dark" : "light"); } catch {}
   };
   const submit = (e: FormEvent) => { e.preventDefault(); if (q.trim()) router.push(`/search?q=${encodeURIComponent(q.trim())}`); };
-  const tabs = [{ href: "/", label: "All products" }, ...categories.map((c) => ({ href: `/c/${c.slug}`, label: c.label }))];
+  const tabs = [{ href: "/", label: "All products" }, ...categories.map((c) => ({ href: `/c/${c.slug}`, label: c.label })), { href: "/insights", label: "Insights" }];
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/90 backdrop-blur">

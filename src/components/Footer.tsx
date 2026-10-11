@@ -12,7 +12,8 @@ export default function Footer() {
           <ul className="space-y-2"><li className="font-display font-medium">Account</li>
             <li><Link className="text-sub hover:text-brand" href="/account">Sign in</Link></li>
             <li><Link className="text-sub hover:text-brand" href="/orders">Your orders</Link></li>
-            <li><Link className="text-sub hover:text-brand" href="/wishlist">Wishlist</Link></li></ul>
+            <li><Link className="text-sub hover:text-brand" href="/wishlist">Wishlist</Link></li>
+            <li><Link className="text-sub hover:text-brand" href="/insights">Sales insights</Link></li></ul>
         </div>
       </div>
       <p className="mx-auto max-w-[1400px] border-t border-line px-4 py-6 text-xs text-sub sm:px-8 lg:px-14">© {new Date().getFullYear()} Rushh. All rights reserved.</p>
